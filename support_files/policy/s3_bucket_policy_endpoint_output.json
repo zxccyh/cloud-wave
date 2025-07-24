@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::lab-edu-bucket-image-731184206846",
+                "arn:aws:s3:::lab-edu-bucket-image-731184206846/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:sourceVpce": "vpce-027ac9a9db72b2f6e"
+                }
+            }
+        }
+    ]
+}
